@@ -255,7 +255,7 @@ for fix=1:length(f)
         %this_s_t=this_s_time(1:19);
         %this_t=datenum(this_s_t)+str2double(this_s_h_offs)/24+str2double(this_s_m_offs)/(60*24);
         this_t=datenum(this_s_time);
-        us=sprintf('https://maps.googleapis.com/maps/api/geocode/json?latlng=%0.9f,%0.9f&result_type=administrative_area_level_2&key=AIzaSyDUf3GC36mWcRCFIqQbWF3RkUzDv3IdFHA',this_lat,this_long);
+        us=sprintf('https://maps.googleapis.com/maps/api/geocode/json?latlng=%0.9f,%0.9f&result_type=administrative_area_level_2&key=',this_lat,this_long);
         for rix=1:num_url_retry
             try
                 js=webread(us);
